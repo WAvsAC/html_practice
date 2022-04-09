@@ -1,48 +1,87 @@
  /* ====================Layout section =================*/
 body {
 	margin: 0px;
-	background-color: gray;
+	background-color: lightgray;
 	font-size: 14px;
+    box-sizing: border-box;
 }
 #header {
-    background-color: #00A8A8;
+    background-color: lightsteelblue;
     height: 90px;
     margin: 10px;
     border-radius: 5px;
+    box-shadow: 0 2px 10px 7px gray;
 }
 #nav {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-}
-#nav ul {
-    background-color: #444;
-    list-style: none;
-   text-align: center;
-    margin: 10px;
-    padding: 0px;
+    margin: 10px 10px;
+    background: #444;
+    height: 40px;
     border-radius: 5px;
     box-shadow: 2px 2px 10px black;
 }
+#nav #home {
+    float: left;
+    max-width: 100%;
+    max-height: 100%;
+
+}/*
+#nav #search {
+    
+    float: right;
+    max-width: 100%;
+    max-height: 100%;
+}*/
+#nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: 5px 7px 15px black;
+}
+#nav img{
+    padding: 0px 10px 0px;
+}
 #nav ul li {
-	//float: left;
-    display: inline-block;
-    padding: 10px;
+    float: left;
+    width: 170px;
+    height: 40px;
+    line-height: 40px;
+    display: block;
+    text-align: center;
     border-right: 0.5px solid white;
+    position: relative;
+    background: #444;
 }
 #nav ul li a {
-    color: white;
     text-decoration: none;
-    padding: 15px; 
-    font-size: 140%;
+    font-size: 1.3em;
+    color: white;
 }
-
 #nav li:last-child {
     border-right: none;
 }
 #nav li:hover{
-	background-color: green;
+    background-color: green;
 }
+#nav ul ul {
+    display: none;
+
+}
+#nav ul li:hover > ul{
+    display: block;
+    box-shadow: 5px 7px 15px black;
+}
+#nav ul li:hover > ul li{
+    border-bottom: 0.5px solid white;   
+}
+#nav ul ul ul{
+    margin-left: 170px;
+    position: absolute;
+    top: 0;
+}
+
 #left {
 	background-color: #C0C0C0;
 	float: left;
@@ -54,7 +93,7 @@ body {
     clear: left;
 }
 #right {
-	background-color: #C0C0C0;
+	background-color: lightcyan;
 	float: right;
 	margin: 0px 10px 10px 10px;
 	padding: 20px;
@@ -62,6 +101,7 @@ body {
 	border-radius: 5px;
 	font-size: 120%;
     clear: right;
+    
 }
 .sideimage {
 	float: right;
@@ -71,12 +111,13 @@ body {
     clear: right;
     opacity: 1;
     transition: opacity 2s ease;
+    box-shadow: 0 2px 10px 7px gray;
 }
 .sideimage:hover {
 	opacity: 0.3;
 }
 .content {
-	background-color: #C0C0C0;
+	background-color: white;
 	margin: 0px 320px 10px 10px;
     padding: 20px;
     font-size: 120%;
@@ -125,7 +166,10 @@ body {
 	padding: 5px;
 	margin: 5px;
 }
- #selected {
+#nav #selected {
+    background-color: green;
+}
+#selected {
 	background-color: green;
 }
  #right p:hover:not(#selected) {
